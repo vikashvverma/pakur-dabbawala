@@ -2,10 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import {NavController} from 'ionic-angular';
 
 
-import {AngularFireDatabase, AngularFireList} from 'angularfire2/database';
+import {AngularFireDatabase} from 'angularfire2/database';
 import {AngularFireAuth} from 'angularfire2/auth';
 
-// import { AngularFireAuthProvider  } from 'angularfire2/auth'
 
 @Component({
   selector: 'page-signup',

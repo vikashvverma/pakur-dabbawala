@@ -7,14 +7,25 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
 
+  <ion-list>
     <ion-item>
-      <ion-label floating>Username</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-label floating>Email ID</ion-label>
+      <ion-input name="emailid" id="emailid" type="text" [(ngModel)]="email" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})" required #emailid="ngModel"></ion-input>
     </ion-item>
   </ion-list>
 
+  <div *ngIf="emailid.invalid && (emailid.dirty || emailid.touched)"
+       class="alert alert-danger">
+
+    <div *ngIf="emailid.errors.required">
+      Name is required.
+    </div>
+    <!--<div *ngIf="email.errors.invalid">-->
+      <!--Email must be valid.-->
+    <!--</div>-->
+
+  </div>
   <div padding>
     <button block ion-button (click)="reset();">Reset Password</button>
   </div>

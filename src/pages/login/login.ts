@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { SignupPage } from "../signup/signup";
+import { ResetPage } from "../reset/reset";
 
 @Component({
   selector: 'page-login',
@@ -17,5 +18,9 @@ export class LoginPage implements OnInit{
 
   signup(): void {
     this.navCtrl.push(SignupPage);
+  }
+
+  reset():void{
+    this.navCtrl.push(ResetPage);
   }
 }
